@@ -1,0 +1,13 @@
+@import url("https://fonts.googleapis.com/css2?family=Iceberg&family=Outfit:wght@100..900&display=swap");
+@import "tailwindcss";
+
+@theme {
+  --font-iceberg: "Iceberg", sans-serif;
+  --font-outfit: "Outfit", sans-serif;
+
+  --color-black: #000000;
+  --color-white: #ffffff;
+  --color-orange: #ff5308;
+  --color-gray: #d9d9d9;
+  --color-semi-black: #333333;
+}
