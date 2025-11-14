@@ -1,10 +1,14 @@
 function Hero() {
-    return (
-        <section>
-            <h1>Welcome to My Portfolio</h1>
-            <p>Hi, I'm Megh Patel, a passionate web developer.</p>
-        </section>
-    );
+  return (
+    <>
+      <div className="w-full h-screen flex flex-col justify-center items-center text-center px-4 bg-hero bg-cover bg-center">
+        <div className="text-5xl font-semi-bold text-black font-ADLaM-Display select-none md:text-8xl sm:text-7xl">
+          <span className="text-white">W</span>ELCO
+          <span className="text-white">M</span>E
+        </div>
+      </div>
+    </>
+  );
 }
 
-export default Hero
+export default Hero;

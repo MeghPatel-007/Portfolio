@@ -69,3 +69,5 @@ portfolio/
 ├── vite.config.js
 └── README.md
 ````
+
+THINGS GOT FUCKED UP        
