@@ -1,3 +1,4 @@
+````bash
 portfolio/
 │
 ├── public/
@@ -67,3 +68,4 @@ portfolio/
 ├── package.json
 ├── vite.config.js
 └── README.md
+````
