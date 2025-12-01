@@ -11,7 +11,7 @@ function NavBar() {
             className="flex items-center space-x-3 rtl:space-x-reverse"
           >
             <img src={profile} className="h-12" alt="MeghPatel Logo" />
-            <span className="self-center text-2xl whitespace-nowrap ">
+            <span className="self-center text-2xl whitespace-nowrap text-white">
               Megh Patel
             </span>
           </a>
@@ -34,11 +34,11 @@ function NavBar() {
             className="hidden w-full md:block md:w-auto"
             id="navbar-solid-bg"
           >
-            <ul className="flex flex-col font-medium mt-4 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-transparent text-base">
+            <ul className="flex flex-col font-medium mt-4 rounded-lg bg-white md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-transparent text-base">
               <li>
                 <a
                   href="#"
-                  className="block py-2 px-3 md:p-0 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-orange"
+                  className="block py-2 px-3 md:p-0 text-white rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-orange"
                 >
                   About
                 </a>
@@ -46,7 +46,7 @@ function NavBar() {
               <li>
                 <a
                   href="#"
-                  className="block py-2 px-3 md:p-0 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-orange"
+                  className="block py-2 px-3 md:p-0 text-white rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-orange"
                 >
                   Projects
                 </a>
@@ -54,7 +54,7 @@ function NavBar() {
               <li>
                 <a
                   href="#"
-                  className="block py-2 px-3 md:p-0 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-orange"
+                  className="block py-2 px-3 md:p-0 text-white rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-orange"
                 >
                   Resume
                 </a>
@@ -62,7 +62,7 @@ function NavBar() {
               <li>
                 <a
                   href="#"
-                  className="block py-2 px-3 md:p-0 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-orange"
+                  className="block py-2 px-3 md:p-0 text-white rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-orange"
                 >
                   Contact
                 </a>
