@@ -6,7 +6,7 @@ import { EffectComposer, Bloom } from "@react-three/postprocessing";
 
 function SceneCanvas() {
   return (
-    <div className="fixed top-0 left-0 w-full h-screen position-relative z-10 pointer-events-none">
+    <div className="absolute top-0 left-0 w-full h-screen z-10 pointer-events-none">
       <Canvas
         shadows
         camera={{ position: [0, 1.5, 8], fov: 50 }}
@@ -30,4 +30,4 @@ function SceneCanvas() {
   );
 }
 
-export default SceneCanvas;
+export default SceneCanvas; 

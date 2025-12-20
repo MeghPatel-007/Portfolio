@@ -1,11 +1,21 @@
-@import url("https://fonts.googleapis.com/css2?family=ADLaM+Display&family=Iceberg&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=ADLaM+Display&family=Bebas+Neue&family=Gravitas+One&family=Hurricane&family=Iceberg&family=Irish+Grover&family=Jacquarda+Bastarda+9&family=Jersey+20&family=Jomolhari&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Leckerli+One&display=swap');
 @import "tailwindcss";
 
 @theme {
+  /* Fonts*/
   --font-iceberg: "Iceberg", sans-serif;
   --font-ADLaM-Display: "ADLaM Display", system-ui;
-  --font-outfit: "Outfit", sans-serif;
+  --font-bebas-neue: "Bebas Neue", sans-serif;
+  --font-gravitas-one: "Gravitas One", serif;
+  --font-jacquarda-bastarda-9: "Jacquarda Bastarda 9", serif;
+  --font-jersey-20: "Jersey 20", sans-serif;
+  --font-leckerli-one: "Leckerli One", cursive;
+  --font-hurricane: "Hurricane", cursive;
+  --font-irish-grover: "Irish Grover", cursive;
+  --font-jomolhari: "Jomolhari", serif;
+  --font-josefin-sans: "Josefin Sans", sans-serif;
 
+  /* Colors */
   --color-black: #000000;
   --color-white: #ffffff;
   --color-orange: #ff5308;
@@ -13,5 +23,4 @@
   --color-semi-black: #333333;
   --color-hero: #e9e9e9;
 
-  --text-10x1: 10rem;
 }
