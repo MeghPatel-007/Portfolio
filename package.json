@@ -10,14 +10,18 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@gsap/react": "^2.1.2",
     "@react-three/drei": "^10.7.6",
     "@react-three/fiber": "^9.4.0",
     "@react-three/postprocessing": "^3.0.4",
     "@tailwindcss/cli": "^4.1.17",
+    "framer-motion": "^12.34.3",
+    "gsap": "^3.14.2",
     "leva": "^0.10.1",
     "lil-gui": "^0.21.0",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
+    "react-icons": "^5.5.0",
     "tailwindcss": "^4.1.17"
   },
   "devDependencies": {
