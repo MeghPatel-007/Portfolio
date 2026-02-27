@@ -7,12 +7,13 @@ import Skills from "./sections/skills.jsx";
 import Projects from "./sections/editing.jsx";
 import Resume from "./sections/resume.jsx";
 import Contact from "./sections/contact.jsx";
+import Lazyloading from "./components/three/lazyloading.jsx";
 
 function App() {
   return (
     <>
       <NavBar />
-      {/* <SceneCanvas /> */}
+      <Lazyloading />
       <Hero />
       <About />
       <Skills />
