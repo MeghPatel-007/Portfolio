@@ -39,7 +39,7 @@ function HorizontalProjects() {
 function HorizontalPanel({ src, title }) {
   return (
     <div className="w-screen h-full flex items-center justify-center">
-      <div className="mx-1 h-[90%] relative group rounded-2xl overflow-hidden border-4 border-gray-600 ">
+      <div className="mx-1 h-[90%] relative group rounded-2xl overflow-hidden border-3 border-orange ">
         <video
           src={src}
           autoPlay

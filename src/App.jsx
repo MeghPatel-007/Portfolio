@@ -5,6 +5,8 @@ import About from "./sections/About.jsx";
 import HorizontalProjects from "./sections/projects.jsx";
 import Skills from "./sections/skills.jsx";
 import Projects from "./sections/editing.jsx";
+import Resume from "./sections/resume.jsx";
+import Contact from "./sections/contact.jsx";
 
 function App() {
   return (
