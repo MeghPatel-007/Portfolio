@@ -11,9 +11,10 @@ import Contact from "./contact.jsx";
 
 function Projects() {
   return (
-    <section className="bg-zinc-900 px-6 py-20 relative">
+    <>
+    <section className="bg-zinc-900 px-6 pt-20 relative">
       <h2 className="text-5xl font-iceberg text-white mb-12">Editing</h2>
-      <div className="bg-orange h-full w-[30%] absolute top-50 right-[15%] z-1"></div>
+      <div className="bg-orange h-[95.5%] md:h-[97%] lg:h-[98%] xl:h-[99%] w-[30%] absolute top-50 right-[15%] z-1"></div>
       <div className="grid grid-cols-2 gap-6 auto-rows-[200px]">
         <BrickVideo src={v1} span="row-span-2" />
         <BrickVideo src={v2} span="row-span-1" />
@@ -28,6 +29,7 @@ function Projects() {
       <Resume />
       <Contact />
     </section>
+    </>
   );
 }
 

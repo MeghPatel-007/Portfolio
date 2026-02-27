@@ -4,7 +4,7 @@ import pdf from "/pdf/resume.pdf";
 
 function Resume() {
   return (
-    <section className="bg-zinc-900 px-6 py-20 relative ">
+    <section id="Resume" className="bg-zinc-900 px-6 py-20 relative ">
       <h2 className="text-5xl font-iceberg text-white mb-30">Resume</h2>
       <div className="z-0">
         <div className="md:ml-[5%] flex  w-[75%] justify-center items-center ">
@@ -26,7 +26,12 @@ function Resume() {
         </div>
       </div>
       <button className="absolute bottom-20 right-12  md:bottom-12 md:right-[16%] lg:bottom-16 lg:right-[17%] xl:right-[20%] bg-gray text-black font-iceberg px-6  md:px-10 lg:px-16  py-2.5  text-[12px]  md:text-lg rounded-full shadow-md flex items-center justify-center transition duration-200 hover:brightness-105 active:scale-95 z-10">
-        Download CV
+      <a
+    href={pdf}
+  download = "Megh_Patel_resume.pdf"
+>
+  Download CV
+</a>
       </button>
     </section>
   );

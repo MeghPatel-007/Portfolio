@@ -37,7 +37,7 @@ function NavBar() {
             <ul className="flex flex-col font-medium mt-4 rounded-lg bg-white md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-transparent text-base">
               <li>
                 <a
-                  href="#"
+                  href="#About"
                   className="block py-2 px-3 md:p-0 text-white rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-orange"
                 >
                   About
@@ -45,7 +45,7 @@ function NavBar() {
               </li>
               <li>
                 <a
-                  href="#"
+                  href="#Projects"
                   className="block py-2 px-3 md:p-0 text-white rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-orange"
                 >
                   Projects
@@ -53,7 +53,7 @@ function NavBar() {
               </li>
               <li>
                 <a
-                  href="#"
+                  href="#Resume"
                   className="block py-2 px-3 md:p-0 text-white rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-orange"
                 >
                   Resume
@@ -61,7 +61,7 @@ function NavBar() {
               </li>
               <li>
                 <a
-                  href="#"
+                  href="#Contact"
                   className="block py-2 px-3 md:p-0 text-white rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-orange"
                 >
                   Contact

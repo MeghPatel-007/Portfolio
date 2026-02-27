@@ -19,6 +19,7 @@ function HorizontalProjects() {
 
   return (
     <section
+    id = "Projects"
       ref={sectionRef}
       className="relative h-[300vh] bg-gradient-to-b from-black via-zinc-950 to-zinc-900"
     >

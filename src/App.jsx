@@ -8,6 +8,7 @@ import Projects from "./sections/editing.jsx";
 import Resume from "./sections/resume.jsx";
 import Contact from "./sections/contact.jsx";
 import Lazyloading from "./components/three/lazyloading.jsx";
+import Contactextended from "./sections/contactextended.jsx"; 
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
       <Skills />
       <HorizontalProjects />
       <Projects/>
+      <Contactextended />
     </>
   );
 }

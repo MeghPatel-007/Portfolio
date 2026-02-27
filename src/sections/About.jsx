@@ -1,6 +1,6 @@
 function About() {
   return (
-      <div className="w-full h-screen bg-zinc-900 border-0">
+      <section id="About" className="w-full h-screen bg-zinc-900 border-0">
         <div className="w-full relative">
           {/* about */}
           <div className="w-[65%] h-25 text-6xl  top-20 md:top-0 md:w-[55%] pl-5 lg:h-50 bg-orange absolute right-0 text-left flex items-center md:pl-10 lg:text-[10rem] font-semi-bold text-white font-ADLaM-Display md:text-8xl md:h-40">
@@ -57,7 +57,7 @@ function About() {
             <span className="font-josefin-sans md:ml-3">s</span>
           </div>
         </div>
-      </div>
+      </section>
   );
 }
 
