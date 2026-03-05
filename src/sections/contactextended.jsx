@@ -90,6 +90,9 @@ function Contactextended() {
           <MdEmail size={22} />
         </a>
       </div>
+      <div className="text-center text-zinc-500 text-sm pb-6 tracking-wider font-ADLaM-Display py-5">
+        Built by <span className="text-orange">Megh Patel</span>
+      </div>
     </section>
   );
 }

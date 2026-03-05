@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import profile from "../../assets/images/profile.png";
+import profile from "/images/profile.png";
 import { motion } from "framer-motion";
 
 function NavBar({ startAnimation }) {
