@@ -5,7 +5,7 @@ import SwordModel from "./SwordModel.jsx";
 import { EffectComposer, Bloom } from "@react-three/postprocessing";
 import { OrbitControls } from "@react-three/drei";
 import React from "react";
-import SmoothReset from "../common/SmoothReset.jsx";
+import SmoothReset from "../common/smoothreset.jsx";
 import { motion } from "framer-motion";
 
 function SceneCanvas({ startAnimation }) {
