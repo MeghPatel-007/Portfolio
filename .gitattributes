@@ -2,4 +2,3 @@
 *.mov filter=lfs diff=lfs merge=lfs -text
 new[[:space:]]sword.glb filter=lfs diff=lfs merge=lfs -text
 *.mp4 filter=lfs diff=lfs merge=lfs -text
-*.glb filter=lfs diff=lfs merge=lfs -text
