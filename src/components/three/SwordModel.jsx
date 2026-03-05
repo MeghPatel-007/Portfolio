@@ -5,7 +5,7 @@ import * as THREE from "three";
 
 function SwordModel() {
   const group = useRef();
-  const { scene } = useGLTF("/models/new sword.glb");
+  const { scene } = useGLTF("/models/new-sword.glb");
   const { viewport } = useThree();
 
   // material setup ONCE
