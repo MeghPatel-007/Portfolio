@@ -1188,6 +1188,11 @@
       display: block;
     }
   }
+  .md\:flex {
+    @media (width >= 48rem) {
+      display: flex;
+    }
+  }
   .md\:hidden {
     @media (width >= 48rem) {
       display: none;
@@ -1644,6 +1649,16 @@
   .xl\:text-\[10rem\] {
     @media (width >= 80rem) {
       font-size: 10rem;
+    }
+  }
+  .\[\@media\(hover\:hover\)\]\:group-hover\:translate-y-0 {
+    @media (hover:hover) {
+      &:is(:where(.group):hover *) {
+        @media (hover: hover) {
+          --tw-translate-y: calc(var(--spacing) * 0);
+          translate: var(--tw-translate-x) var(--tw-translate-y);
+        }
+      }
     }
   }
 }
