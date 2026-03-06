@@ -1,9 +1,9 @@
 import { useGLTF } from "@react-three/drei";
 import { useRef, useEffect } from "react";
-import { useThree } from "@react-three/fiber";
+import { useThree,useFrame  } from "@react-three/fiber";
 import * as THREE from "three";
 
-function SwordModel() {
+function SwordModel({ autoRotate }) {
   const group = useRef();
   const { scene } = useGLTF("/models/new-swords.glb");
   const { viewport } = useThree();
@@ -34,6 +34,12 @@ function SwordModel() {
       : viewport.width < 10
         ? [0, 0.7, 0]
         : [-1, 0, 0];
+
+  useFrame((state, delta) => {
+    if (autoRotate && group.current) {
+      group.current.rotation.y += delta * 0.5;
+    }
+  });
 
   return (
     <primitive

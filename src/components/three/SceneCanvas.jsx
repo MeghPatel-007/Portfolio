@@ -7,6 +7,7 @@ import { OrbitControls } from "@react-three/drei";
 import React from "react";
 import SmoothReset from "../common/smoothreset.jsx";
 import { motion } from "framer-motion";
+import { TOUCH } from "three";
 
 function SceneCanvas({ startAnimation }) {
   const controlsRef = useRef();
@@ -20,9 +21,11 @@ function SceneCanvas({ startAnimation }) {
     }, 100);
   };
 
+const isTouch = window.matchMedia("(pointer: coarse)").matches;
+
   return (
     <motion.div
-      className="absolute top-0 left-0 w-full h-screen z-10 pointer-events-none"
+      className="absolute top-0 left-0 w-full h-screen z-10 touch-pan-y"
       initial={{ opacity: 0 }}
       animate={startAnimation ? { opacity: 1 } : { opacity: 0 }}
       transition={{ duration: 0.5, ease: "easeInOut" }}
@@ -36,7 +39,7 @@ function SceneCanvas({ startAnimation }) {
       >
         <Suspense fallback={null}>
           <Lighting />
-          <SwordModel />
+          <SwordModel autoRotate={isTouch} />
           <EffectComposer>
             <Bloom
               intensity={1.2}
@@ -45,16 +48,18 @@ function SceneCanvas({ startAnimation }) {
               radius={0.8}
             />
           </EffectComposer>
-          <OrbitControls
-            rotateSpeed={0.8}
-            ref={controlsRef}
-            enableZoom={false}
-            enablePan={false}
-            onStart={scheduleReset}
-            onEnd={scheduleReset}
-            enableDamping
-            dampingFactor={0.9}
-          />
+          {!isTouch&&(
+            <OrbitControls
+              rotateSpeed={0.8}
+              ref={controlsRef}
+              enableZoom={false}
+              enablePan={false}
+              onStart={scheduleReset}
+              onEnd={scheduleReset}
+              enableDamping
+              dampingFactor={0.9}
+            />
+          )}
           <SmoothReset controlsRef={controlsRef} resettingRef={resettingRef} />
         </Suspense>
       </Canvas>
