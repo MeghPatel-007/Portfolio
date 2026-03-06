@@ -1,6 +1,7 @@
-import React, { useState } from "react";
+import { React, useState } from "react";
 import profile from "/images/profile.png";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 function NavBar({ startAnimation }) {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -14,10 +15,10 @@ function NavBar({ startAnimation }) {
     >
       <div className="flex flex-wrap items-center justify-between mx-auto p-4">
         {/* Logo */}
-        <a href="#hero" className="flex items-center space-x-3">
+        <Link to="/" className="flex items-center space-x-3">
           <img src={profile} className="h-12" alt="MeghPatel Logo" />
           <span className="text-2xl text-white">Megh Patel</span>
-        </a>
+        </Link>
 
         {/* Hamburger */}
         <button
@@ -36,36 +37,44 @@ function NavBar({ startAnimation }) {
         <div className="hidden md:block md:w-auto">
           <ul className="flex md:flex-row md:space-x-8 text-base">
             <li>
-              <a
-                href="#About"
+              <Link
+                to="/#About"
                 className="block py-2 text-white hover:text-orange"
               >
                 About
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="#Projects"
+              <Link
+                to="#Projects"
                 className="block py-2 text-white hover:text-orange"
               >
                 Projects
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="#Resume"
+              <Link
+                to="#Resume"
                 className="block py-2 text-white hover:text-orange"
               >
                 Resume
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="#Contact"
+              <Link
+                to="#Contact"
                 className="block py-2 text-white hover:text-orange"
               >
                 Contact
-              </a>
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="/edit"
+                className="block py-2 text-white hover:text-orange"
+              >
+                Editing
+              </Link>
             </li>
           </ul>
         </div>
@@ -81,36 +90,44 @@ function NavBar({ startAnimation }) {
           >
             <ul className="flex flex-col mt-4 text-base bg-zinc-900 rounded-lg p-4">
               <li>
-                <a
-                  href="#About"
+                <Link
+                  to="/#About"
                   className="block py-2 text-white hover:text-orange"
                 >
                   About
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="#Projects"
+                <Link
+                  to="/#Projects"
                   className="block py-2 text-white hover:text-orange"
                 >
                   Projects
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="#Resume"
+                <Link
+                  to="/#Resume"
                   className="block py-2 text-white hover:text-orange"
                 >
                   Resume
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="#Contact"
+                <Link
+                  to="/#Contact"
                   className="block py-2 text-white hover:text-orange"
                 >
                   Contact
-                </a>
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/edit"
+                  className="block py-2 text-white hover:text-orange"
+                >
+                  Editing
+                </Link>
               </li>
             </ul>
           </motion.div>

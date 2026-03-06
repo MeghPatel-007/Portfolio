@@ -1,46 +1,19 @@
-import { lazy, Suspense, useState } from "react";
-import { AnimatePresence } from "framer-motion";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Home from "./pages/home.jsx";
+import ScrollToHash from "./components/common/scrolltohash.jsx";
+import {lazy} from "react";
 
-import NavBar from "./components/common/navbar.jsx";
-import Hero from "./sections/Hero.jsx";
-import About from "./sections/About.jsx";
-import Skills from "./sections/skills.jsx";
-import HorizontalProjects from "./sections/projects.jsx";
-
-import Loader from "./components/common/loader.jsx";
-import Contactextended from "./sections/contactextended.jsx";
-import Editing from "./sections/editing.jsx";
-
-import { useEffect } from "react";
-
-const SceneCanvas = lazy(() => import("./components/three/SceneCanvas.jsx"));
+const Editing = lazy(() => import("./pages/editing.jsx"));
 
 function App() {
-  const [loadingFinished, setLoadingFinished] = useState(false);
-
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
-
   return (
-    <>
-      <NavBar startAnimation={loadingFinished} />
-      <SceneCanvas startAnimation={loadingFinished} />
-
-      <AnimatePresence mode="wait">
-        {!loadingFinished && (
-          <Loader onFinish={() => setLoadingFinished(true)} />
-        )}
-      </AnimatePresence>
-
-      {/* Always render the page */}
-      <Hero startAnimation={loadingFinished} />
-      <About startAnimation={loadingFinished} />
-      <Skills />
-      <HorizontalProjects />
-      <Editing />
-      <Contactextended />
-    </>
+    <BrowserRouter>
+      <ScrollToHash />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/edit" element={<Editing />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 

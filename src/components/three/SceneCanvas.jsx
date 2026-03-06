@@ -1,13 +1,11 @@
-import { Canvas, useFrame } from "@react-three/fiber";
-import { useRef, Suspense, useState,useEffect } from "react";
+import { Canvas } from "@react-three/fiber";
+import { useRef, Suspense } from "react";
 import Lighting from "./Lighting.jsx";
 import SwordModel from "./SwordModel.jsx";
 import { EffectComposer, Bloom } from "@react-three/postprocessing";
 import { OrbitControls } from "@react-three/drei";
-import React from "react";
 import SmoothReset from "../common/smoothreset.jsx";
 import { motion } from "framer-motion";
-import { TOUCH } from "three";
 import useMediaQuery from "../common/useMediaQuery.jsx";
 
 function SceneCanvas({ startAnimation }) {
@@ -23,10 +21,9 @@ function SceneCanvas({ startAnimation }) {
     }, 100);
   };
 
-
   return (
     <motion.div
-      className="absolute top-0 left-0 w-full h-screen z-10 touch-pan-y"
+      className="absolute top-0 left-0 w-full h-screen z-10"
       initial={{ opacity: 0 }}
       animate={startAnimation ? { opacity: 1 } : { opacity: 0 }}
       transition={{ duration: 0.5, ease: "easeInOut" }}
@@ -40,27 +37,32 @@ function SceneCanvas({ startAnimation }) {
         <Suspense fallback={null}>
           <Lighting />
           <SwordModel autoRotate={isMobile} />
-          <EffectComposer>
-            <Bloom
-              intensity={1.2}
-              luminanceThreshold={0.2}
-              luminanceSmoothing={0.9}
-              radius={0.8}
-            />
-          </EffectComposer>
-          {!isMobile&&(
-            <OrbitControls
-              rotateSpeed={0.8}
-              ref={controlsRef}
-              enableZoom={false}
-              enablePan={false}
-              onStart={scheduleReset}
-              onEnd={scheduleReset}
-              enableDamping
-              dampingFactor={0.9}
-            />
+          {!isMobile && (
+            <>
+              <EffectComposer>
+                <Bloom
+                  intensity={1.2}
+                  luminanceThreshold={0.2}
+                  luminanceSmoothing={0.08}
+                  radius={0.8}
+                />
+              </EffectComposer>
+              <OrbitControls
+                rotateSpeed={0.8}
+                ref={controlsRef}
+                enableZoom={false}
+                enablePan={false}
+                onStart={scheduleReset}
+                onEnd={scheduleReset}
+                enableDamping
+                dampingFactor={0.9}
+              />
+              <SmoothReset
+                controlsRef={controlsRef}
+                resettingRef={resettingRef}
+              />
+            </>
           )}
-          <SmoothReset controlsRef={controlsRef} resettingRef={resettingRef} />
         </Suspense>
       </Canvas>
     </motion.div>

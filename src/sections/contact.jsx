@@ -6,8 +6,8 @@ function Contact() {
   return (
     <>
       <section
-        className="bg-zinc-900 
-       xl:pl-20 lg:pl-20 md:pl-10
+        className="bg-zinc-900 pl-5
+       xl:pl-35 lg:pl-25 md:pl-17
        py-20 relative"
       >
         <div className="flex flex-col items-center">
