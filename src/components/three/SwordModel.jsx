@@ -5,7 +5,7 @@ import * as THREE from "three";
 
 function SwordModel({ autoRotate }) {
   const group = useRef();
-  const { scene } = useGLTF("/models/new-swords.glb");
+  const { scene } = useGLTF("https://res.cloudinary.com/dd4vpchfg/image/upload/v1772821155/new-swords_plvmoo.glb");
   const { viewport } = useThree();
 
   // material setup ONCE

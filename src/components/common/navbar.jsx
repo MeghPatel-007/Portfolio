@@ -1,8 +1,7 @@
 import { React, useState } from "react";
-import profile from "/images/profile.png";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-
+const profile = "https://res.cloudinary.com/dd4vpchfg/image/upload/v1772821492/profile_iklrbw.png";
 function NavBar({ startAnimation }) {
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -46,7 +45,7 @@ function NavBar({ startAnimation }) {
             </li>
             <li>
               <Link
-                to="#Projects"
+                to="/#Projects"
                 className="block py-2 text-white hover:text-orange"
               >
                 Projects
@@ -54,7 +53,7 @@ function NavBar({ startAnimation }) {
             </li>
             <li>
               <Link
-                to="#Resume"
+                to="/#Resume"
                 className="block py-2 text-white hover:text-orange"
               >
                 Resume
@@ -62,7 +61,7 @@ function NavBar({ startAnimation }) {
             </li>
             <li>
               <Link
-                to="#Contact"
+                to="/#Contact"
                 className="block py-2 text-white hover:text-orange"
               >
                 Contact
