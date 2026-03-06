@@ -38,11 +38,7 @@ function App() {
       <About startAnimation={loadingFinished} />
       <Skills />
       <HorizontalProjects />
-
-      <Suspense fallback={null}>
-        <Editing />
-      </Suspense>
-
+      <Editing />
       <Contactextended />
     </>
   );
