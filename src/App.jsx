@@ -7,13 +7,13 @@ import About from "./sections/About.jsx";
 import Skills from "./sections/skills.jsx";
 import HorizontalProjects from "./sections/projects.jsx";
 
-import SceneCanvas from "./components/three/SceneCanvas.jsx";
 import Loader from "./components/common/loader.jsx";
 import Contactextended from "./sections/contactextended.jsx";
 
 import { useEffect } from "react";
 
 const Editing = lazy(() => import("./sections/editing.jsx"));
+const SceneCanvas = lazy(() => import("./components/three/SceneCanvas.jsx"));
 
 function App() {
   const [loadingFinished, setLoadingFinished] = useState(false);
