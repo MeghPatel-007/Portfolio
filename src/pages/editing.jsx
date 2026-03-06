@@ -57,7 +57,7 @@ function BrickVideo({ src, span }) {
       <video
         src={src}
         preload="metadata"
-        autoPlay="visible"
+        autoPlay
         loop
         muted
         playsInline

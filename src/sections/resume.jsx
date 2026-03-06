@@ -2,9 +2,8 @@ import React from "react";
 import pdf from "/pdf/resume.pdf";
 import { motion } from "framer-motion";
 import Contact from "./contact.jsx";
+
 const img =
-  "https://res.cloudinary.com/dd4vpchfg/image/upload/v1772821499/sword_fa3olj.png";
-const preview =
   "https://res.cloudinary.com/dd4vpchfg/image/upload/v1772821506/resume_stz1bw.jpg";
 
 function Resume() {
@@ -51,7 +50,7 @@ function Resume() {
               viewport={{ once: true }}
             >
               <img
-                src={preview}
+                src={img}
                 alt=""
                 className="w-90 h-60 md:w-150 md:h-100 lg:w-full lg:h-full object-cover rounded-lg "
               />

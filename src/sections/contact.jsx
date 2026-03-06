@@ -1,6 +1,7 @@
 import React from "react";
-import sword from "/images/sword.png";
 import { motion } from "framer-motion";
+const sword =
+  "https://res.cloudinary.com/dd4vpchfg/image/upload/v1772821499/sword_fa3olj.png";
 
 function Contact() {
   return (
