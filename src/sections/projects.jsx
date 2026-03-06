@@ -98,11 +98,12 @@ function HorizontalPanel({ src, title, link }) {
         <a
           href={link}
           target="_blank"
+          rel="noopener noreferrer"
           className="absolute inset-0 bg-gray-900/60
-          translate-y-full
-          group-hover:translate-y-0
-          transition-transform duration-300
-          flex items-center justify-center"
+           translate-y-full
+           [@media(hover:hover)]:group-hover:translate-y-0
+           transition-transform duration-300
+           flex items-center justify-center"
         >
           <span className="text-white text-lg font-semibold">
             View Details →

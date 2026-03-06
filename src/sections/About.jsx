@@ -7,8 +7,8 @@ function About({ startAnimation }) {
         <motion.div
           className="w-[65%] h-25 text-6xl  top-20 md:top-0 md:w-[55%] pl-5 lg:h-50 bg-orange absolute right-0 text-left flex items-center md:pl-10 lg:text-[10rem] font-semi-bold text-white font-ADLaM-Display md:text-8xl md:h-40 shadow-[0_10px_20px_rgba(0,0,0,0.35)]"
           style={!startAnimation && { display: "none" }}
-          initial={{ x: "100%" }}
-          whileInView={{ x: 0 }}
+          initial={{ clipPath: "inset(0 0 0 100%)" }}
+          whileInView={{ clipPath: "inset(0 0 0 0)" }}
           transition={{ duration: 0.8, ease: "easeIn" }}
           viewport={{ once: true }}
         >
@@ -19,8 +19,8 @@ function About({ startAnimation }) {
         <motion.div
           className="h-22 top-45 left-5 w-[50%] bg-orange absolute flex justify-center items-center md:w-[40%] md:h-28 md:left-20 md:top-39 lg:h-36 lg:top-49 lg:left-40 xl:w-[30%] xl:left-60 shadow-[inset_0_-6px_10px_rgba(0,0,0,0.35)] "
           style={!startAnimation && { display: "none" }}
-          initial={{ x: "-100%" }}
-          whileInView={{ x: 0 }}
+          initial={{ clipPath: "inset(0 100% 0 0)" }}
+          whileInView={{ clipPath: "inset(0 0 0 0)" }}
           transition={{ duration: 0.8, ease: "easeIn" }}
           viewport={{ once: true }}
         >
@@ -52,8 +52,8 @@ function About({ startAnimation }) {
         <motion.div
           className="h-20 top-90 w-[75%] bg-orange absolute text-center flex justify-center items-center md:h-25 md:top-84 lg:h-35 lg:top-115 xl:w-[70%] shadow-[inset_0_2px_4px_rgba(255,255,255,0.3),0_8px_15px_rgba(0,0,0,0.35)] "
           style={!startAnimation && { display: "none" }}
-          initial={{ x: "-100%" }}
-          whileInView={{ x: 0 }}
+          initial={{ clipPath: "inset(0 100% 0 0)" }}
+          whileInView={{ clipPath: "inset(0 0 0 0)" }}
           transition={{ duration: 0.8, ease: "easeIn" }}
           viewport={{ once: true }}
         >
@@ -73,24 +73,24 @@ function About({ startAnimation }) {
         <motion.div
           className="w-[75%] h-4 md:h-6 bg-orange absolute top-125 lg:top-177 lg:h-7 right-0 md:top-130 xl:top-175 shadow-[0_4px_6px_rgba(0,0,0,0.4)] "
           style={!startAnimation && { display: "none" }}
-          initial={{ x: "100%" }}
-          whileInView={{ x: 0 }}
+          initial={{ clipPath: "inset(0 0 0 100%)" }}
+          whileInView={{ clipPath: "inset(0 0 0 0)" }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
         ></motion.div>
         <motion.div
           className="right-10 w-[80%] md:w-[75%] h-4 md:h-6 bg-orange absolute top-135 lg:h-7 lg:top-188 md:right-10 z-1 md:top-140 xl:top-185 shadow-[0_6px_10px_rgba(0,0,0,0.45)] "
           style={!startAnimation && { display: "none" }}
-          initial={{ x: "-100%" }}
-          whileInView={{ x: 0 }}
+            initial={{ clipPath: "inset(0 0 0 100%)" }}
+          whileInView={{ clipPath: "inset(0 0 0 0)" }}
           transition={{ duration: 0.9 }}
           viewport={{ once: true }}
         ></motion.div>
         <motion.div
           className="w-[75%] h-4 md:h-6 bg-orange absolute top-145 lg:top-200 right-0 md:top-150 lg:h-7 xl:top-195 shadow-[0_4px_6px_rgba(0,0,0,0.4)] "
           style={!startAnimation && { display: "none" }}
-          initial={{ x: "100%" }}
-          whileInView={{ x: 0 }}
+          initial={{ clipPath: "inset(0 0 0 100%)" }}
+          whileInView={{ clipPath: "inset(0 0 0 0)" }}
           transition={{ duration: 1 }}
           viewport={{ once: true }}
         ></motion.div>
