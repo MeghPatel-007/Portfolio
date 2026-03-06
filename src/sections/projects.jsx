@@ -4,9 +4,8 @@ import netflix from "/videos/projects/netflix.mp4";
 import rps from "/videos/projects/rps.mp4";
 import ttt from "/videos/projects/tic tac toe.mp4";
 
-import { useRef,useState,useEffect } from "react";
+import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
-
 
 const projects = [
   {
@@ -73,46 +72,24 @@ function HorizontalProjects() {
     </section>
   );
 }
-
 function HorizontalPanel({ src, title, link }) {
-  const ref = useRef();
-  const [visible, setVisible] = useState(false);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setVisible(true);
-          observer.disconnect();
-        }
-      },
-      { threshold: 0.4 }
-    );
-
-    if (ref.current) observer.observe(ref.current);
-
-    return () => observer.disconnect();
-  }, []);
-
   return (
-    <div ref={ref} className="w-screen h-full flex items-center justify-center">
+    <div className="w-screen h-full flex items-center justify-center">
       <motion.div
         className="mx-2 h-[90%] relative group rounded-2xl overflow-hidden border-3 border-orange shadow-[0_0_20px_rgba(255,83,8,0.6),0_0_40px_rgba(255,83,8,0.4),0_0_40px_rgba(255,83,8,0.2)]"
         initial={{ opacity: 0, y: 40 }}
-        animate={visible ? { opacity: 1, y: 0 } : {}}
+        whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.7, ease: "easeOut" }}
+        viewport={{ once: true, amount: 0.3 }}
       >
-        {visible && (
-          <video
-            src={src}
-            autoPlay
-            loop
-            muted
-            playsInline
-            preload="metadata"
-            className="w-full h-full object-cover"
-          />
-        )}
+        <video
+          src={src}
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="w-full h-full object-cover "
+        />
 
         <div className="absolute bottom-6 left-6 bg-gray-400 rounded-lg opacity-90 border border-gray-600 shadow-[0_20px_60px_rgba(0,0,0,0.6)]">
           <h3 className="text-3xl font-iceberg text-black p-2">{title}</h3>
@@ -123,10 +100,10 @@ function HorizontalPanel({ src, title, link }) {
           target="_blank"
           rel="noopener noreferrer"
           className="absolute inset-0 bg-gray-900/60
-          translate-y-full
-          [@media(hover:hover)]:group-hover:translate-y-0
-          transition-transform duration-300
-          flex items-center justify-center"
+           translate-y-full
+           [@media(hover:hover)]:group-hover:translate-y-0
+           transition-transform duration-300
+           flex items-center justify-center"
         >
           <span className="text-white text-lg font-semibold">
             View Details →
