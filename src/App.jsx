@@ -9,10 +9,10 @@ import HorizontalProjects from "./sections/projects.jsx";
 
 import Loader from "./components/common/loader.jsx";
 import Contactextended from "./sections/contactextended.jsx";
+import Editing from "./sections/editing.jsx";
 
 import { useEffect } from "react";
 
-const Editing = lazy(() => import("./sections/editing.jsx"));
 const SceneCanvas = lazy(() => import("./components/three/SceneCanvas.jsx"));
 
 function App() {
