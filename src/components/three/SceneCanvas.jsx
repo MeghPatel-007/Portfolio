@@ -1,5 +1,5 @@
 import { Canvas, useFrame } from "@react-three/fiber";
-import { useRef, Suspense, useState } from "react";
+import { useRef, Suspense, useState,useEffect } from "react";
 import Lighting from "./Lighting.jsx";
 import SwordModel from "./SwordModel.jsx";
 import { EffectComposer, Bloom } from "@react-three/postprocessing";
@@ -8,8 +8,10 @@ import React from "react";
 import SmoothReset from "../common/smoothreset.jsx";
 import { motion } from "framer-motion";
 import { TOUCH } from "three";
+import useMediaQuery from "../common/useMediaQuery.jsx";
 
 function SceneCanvas({ startAnimation }) {
+  const isMobile = useMediaQuery("(max-width: 768px)");
   const controlsRef = useRef();
   const resettingRef = useRef(false);
   const timeoutRef = useRef();
@@ -21,7 +23,6 @@ function SceneCanvas({ startAnimation }) {
     }, 100);
   };
 
-const isTouch = window.matchMedia("(pointer: coarse)").matches;
 
   return (
     <motion.div
@@ -31,7 +32,6 @@ const isTouch = window.matchMedia("(pointer: coarse)").matches;
       transition={{ duration: 0.5, ease: "easeInOut" }}
     >
       <Canvas
-        frameloop="demand"
         dpr={[1, 1.5]}
         camera={{ position: [0, 1.5, 8], fov: 50 }}
         gl={{ antialias: false }}
@@ -39,7 +39,7 @@ const isTouch = window.matchMedia("(pointer: coarse)").matches;
       >
         <Suspense fallback={null}>
           <Lighting />
-          <SwordModel autoRotate={isTouch} />
+          <SwordModel autoRotate={isMobile} />
           <EffectComposer>
             <Bloom
               intensity={1.2}
@@ -48,7 +48,7 @@ const isTouch = window.matchMedia("(pointer: coarse)").matches;
               radius={0.8}
             />
           </EffectComposer>
-          {!isTouch&&(
+          {!isMobile&&(
             <OrbitControls
               rotateSpeed={0.8}
               ref={controlsRef}
