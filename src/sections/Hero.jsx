@@ -14,7 +14,7 @@ function Hero({ startAnimation }) {
     <>
       <div
         id="hero"
-        className="w-full h-screen flex flex-col items-center justify-center bg-black bg-center"
+        className="w-full h-screen flex flex-col items-center justify-center bg-black bg-center z-50"
       >
         <motion.div
           className="text-5xl font-semi-bold text-white font-ADLaM-Display select-none md:text-8xl lg:text-[10rem]"
