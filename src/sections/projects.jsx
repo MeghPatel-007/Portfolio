@@ -1,31 +1,29 @@
-import laceUp from "/videos/projects/Lace Up.mp4";
-import gemini from "/videos/projects/gemini.mp4";
-import netflix from "/videos/projects/netflix.mp4";
-import rps from "/videos/projects/rps.mp4";
-import ttt from "/videos/projects/tic tac toe.mp4";
-
 import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 
 const projects = [
   {
-    src: gemini,
+    src: "https://res.cloudinary.com/dd4vpchfg/video/upload/v1772820087/gemini_iwsn5o.mp4",
     title: "Gemini",
     link: "https://gemini-three-orcin.vercel.app/",
   },
-  { src: laceUp, title: "Lace Up", link: "https://lace-up-lilac.vercel.app/" },
   {
-    src: netflix,
+    src: "https://res.cloudinary.com/dd4vpchfg/video/upload/v1772820156/Lace_Up_hpvtpt.mp4",
+    title: "Lace Up",
+    link: "https://lace-up-lilac.vercel.app/",
+  },
+  {
+    src: "https://res.cloudinary.com/dd4vpchfg/video/upload/v1772820100/netflix_qrsxuc.mp4",
     title: "Netflix Clone",
     link: "https://netflix-inky-pi.vercel.app/",
   },
   {
-    src: rps,
+    src: "https://res.cloudinary.com/dd4vpchfg/video/upload/v1772820093/rps_dowa0d.mp4",
     title: "Rock Paper Scissors",
     link: "https://rock-paper-scissor-livid-eta.vercel.app/",
   },
   {
-    src: ttt,
+    src: "https://res.cloudinary.com/dd4vpchfg/video/upload/v1772820098/tic_tac_toe_mywsbx.mp4",
     title: "Tic Tac Toe",
     link: "https://tic-tac-toe-beta-gold-31.vercel.app/",
   },

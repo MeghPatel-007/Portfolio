@@ -1,17 +1,17 @@
-import v1 from "/videos/edits/Video-1.mp4";
-import v2 from "/videos/edits/Video-2.mp4";
-import v3 from "/videos/edits/Video-3.mp4";
-import v4 from "/videos/edits/Video-4.mp4";
-import v5 from "/videos/edits/Video-5.mp4";
-import v6 from "/videos/edits/Video-6.mp4";
-import v7 from "/videos/edits/Video-7.mp4";
-import v8 from "/videos/edits/Video-8.mp4";
 import { motion } from "framer-motion";
 import NavBar from "../components/common/navbar";
 import Loader from "../components/common/loader.jsx";
 import { AnimatePresence } from "framer-motion";
 import { useRef, useState, useEffect } from "react";
 
+const v1 = "https://res.cloudinary.com/dd4vpchfg/video/upload/v1772819088/Video-1_jatuhb.mp4";
+const v2 ="https://res.cloudinary.com/dd4vpchfg/video/upload/v1772819095/Video-2_qacgxi.mp4";
+const v3 = "https://res.cloudinary.com/dd4vpchfg/video/upload/v1772819263/Video-3_rxrgbe.mp4";
+const v4 = "https://res.cloudinary.com/dd4vpchfg/video/upload/v1772819666/Video-4_o29cbb.mp4";
+const v5 = "https://res.cloudinary.com/dd4vpchfg/video/upload/v1772819961/Video-5_by6yft.mp4";
+const v6 = "https://res.cloudinary.com/dd4vpchfg/video/upload/v1772820047/Video-6_j7azmz.mp4";
+const v7 = "https://res.cloudinary.com/dd4vpchfg/video/upload/v1772819295/Video-7_mqiune.mp4";
+const v8 = "https://res.cloudinary.com/dd4vpchfg/video/upload/v1772819239/Video-8_nvt4w5.mp4";
 
 function Editing() {
     const [loadingFinished, setLoadingFinished] = useState(false);
@@ -57,7 +57,7 @@ function BrickVideo({ src, span }) {
       <video
         src={src}
         preload="metadata"
-        autoPlay
+        autoPlay="visible"
         loop
         muted
         playsInline
