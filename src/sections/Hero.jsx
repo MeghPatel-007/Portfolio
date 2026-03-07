@@ -16,7 +16,7 @@ function Hero({ startAnimation }) {
         id="hero"
         className="w-full h-screen flex flex-col items-center justify-center bg-black bg-center z-50"
       >
-        <motion.div
+        <div
           className="text-5xl font-semi-bold text-white font-ADLaM-Display select-none md:text-8xl lg:text-[10rem]"
           initial={{ opacity: 0, y: 20 }}
           animate={
@@ -26,7 +26,7 @@ function Hero({ startAnimation }) {
         >
           <span className="text-orange">W</span>ELCO
           <span className="text-orange">M</span>E
-        </motion.div>
+        </div>
       </div>
       <div className="w-full h-screen flex absolute bottom-0 scale-[-1]">
         <Strip height="50%" start={startAnimation} />

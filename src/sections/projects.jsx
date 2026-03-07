@@ -45,13 +45,13 @@ function HorizontalProjects() {
   // total horizontal movement
   const x = useTransform(
     scrollYProgress,
-    [0, 1],
-    ["0%", `-${(projects.length - 1) * 100}%`]
+    [0, 3],
+    ["0%", `-${(projects.length - 1) * 60}%`]
   );
 
   // smooth animation
   const smoothX = useSpring(x, {
-    stiffness: 100,
+    stiffness: 50,
     damping: 30,
   });
 
@@ -63,7 +63,7 @@ function HorizontalProjects() {
 
       <section
         ref={container}
-        className="relative bg-gradient-to-b from-black to-zinc-900 h-screen"
+        className="relative bg-gradient-to-b from-black to-zinc-900 h-full"
       >
         <div className="sticky top-0 h-screen overflow-hidden">
           <motion.div
@@ -87,7 +87,7 @@ function Panel({ thumb, title, link }) {
         href={link}
         target="_blank"
         rel="noopener noreferrer"
-        className="relative w-[90%] h-[80%] rounded-xl overflow-hidden border border-orange"
+        className="relative w-[80%] h-[80%] rounded-xl overflow-hidden border border-orange"
       >
         <img
           src={thumb}

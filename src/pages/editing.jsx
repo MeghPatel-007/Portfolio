@@ -89,10 +89,21 @@ function BrickVideo({ src, span }) {
     }
   }, [visible, isTouch]);
 
+    const handleTouch = () => {
+    if (!videoRef.current) return;
+
+    if (videoRef.current.paused) {
+      videoRef.current.play().catch(() => {});
+    } else {
+      videoRef.current.pause();
+    }
+  };
+
   return (
     <div
       ref={ref}
       className={`relative group overflow-hidden rounded-lg ${span}`}
+      onTouchStart={handleTouch}
     >
       {visible && (
         <video
