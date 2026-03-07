@@ -9,13 +9,9 @@ const img =
 function Resume() {
   return (
     <section id="Resume" className="bg-zinc-900 px-6 py-20 relative">
-      <motion.div
+      <div
         className="bg-orange h-[95.5%] md:h-[97%] lg:h-[98%] xl:h-[99%] w-[44%] absolute right-0 top-50 z-[1]
   shadow-[inset_0_2px_4px_rgba(255,255,255,0.3),0_8px_15px_rgba(0,0,0,0.35)] flex flex-col rounded-l-lg overflow-hidden"
-        initial={{ width: 0, opacity: 0 }}
-        whileInView={{ width: "44%", opacity: 1 }}
-        transition={{ duration: 1, ease: "easeIn" }}
-        viewport={{ once: true, amount: 0.3 }}
       >
         <motion.button
           className="  bg-gray text-black font-iceberg px-6 md:px-10 lg:px-16 py-2.5 text-[12px] md:text-lg rounded-full shadow-md flex items-center justify-center transition duration-200 hover:brightness-105 active:scale-95 text-sm mx-5 mt-60 md:mt-100 md:mx-20 lg:mt-120 lg:mx-29 xl:mt-170 xl:mx-50"
@@ -28,7 +24,7 @@ function Resume() {
             Download CV
           </a>
         </motion.button>
-      </motion.div>
+      </div>
       <h2 className="text-5xl font-iceberg text-white mb-30">Resume</h2>
       <div className="z-0">
         <div className="md:ml-[5%] flex  w-[75%] justify-center items-center ">
