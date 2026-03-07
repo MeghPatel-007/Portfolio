@@ -10,9 +10,10 @@ import HorizontalProjects from "../sections/projects.jsx";
 import Loader from "../components/common/loader.jsx";
 import Contactextended from "../sections/contactextended.jsx";
 import Resume from "../sections/resume.jsx";
-import SceneCanvas from "../components/three/SceneCanvas.jsx";
 
 import { useEffect } from "react";
+
+const SceneCanvas = lazy(() => import("../components/three/SceneCanvas.jsx"));
 
 function Home() {
   const [loadingFinished, setLoadingFinished] = useState(false);
@@ -24,7 +25,9 @@ function Home() {
   return (
     <>
       <NavBar startAnimation={loadingFinished} />
-      <SceneCanvas startAnimation={loadingFinished} />
+<Suspense fallback={null}>
+  <SceneCanvas startAnimation={loadingFinished} />
+</Suspense>
 
       <AnimatePresence mode="wait">
         {!loadingFinished && (

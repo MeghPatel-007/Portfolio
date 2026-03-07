@@ -29,9 +29,12 @@ function SceneCanvas({ startAnimation }) {
       transition={{ duration: 0.5, ease: "easeInOut" }}
     >
       <Canvas
-        dpr={[1, 1.5]}
+        dpr={isMobile ? 1 : [1, 1.5]}
         camera={{ position: [0, 1.5, 8], fov: 50 }}
-        gl={{ antialias: false }}
+        gl={{
+          antialias: false,
+          powerPreference: "high-performance",
+        }}
         className="w-full h-full"
       >
         <Suspense fallback={null}>
@@ -41,10 +44,10 @@ function SceneCanvas({ startAnimation }) {
             <>
               <EffectComposer>
                 <Bloom
-                  intensity={1.2}
-                  luminanceThreshold={0.2}
-                  luminanceSmoothing={0.08}
-                  radius={0.8}
+                  intensity={0.6}
+                  luminanceThreshold={0.35}
+                  luminanceSmoothing={0.2}
+                  radius={0.6}
                 />
               </EffectComposer>
               <OrbitControls
@@ -55,7 +58,7 @@ function SceneCanvas({ startAnimation }) {
                 onStart={scheduleReset}
                 onEnd={scheduleReset}
                 enableDamping
-                dampingFactor={0.9}
+                dampingFactor={0.08}
               />
               <SmoothReset
                 controlsRef={controlsRef}
