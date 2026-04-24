@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import Contact from "./contact.jsx";
 
 const img =
-  "https://res.cloudinary.com/dd4vpchfg/image/upload/q_auto,f_auto/v1775228830/resume-2_page-0001_wfzilh.jpg";
+  "https://res.cloudinary.com/dd4vpchfg/image/upload/v1777056330/resume_page-0001_n8316b.jpg";
 
 function Resume() {
   return (
