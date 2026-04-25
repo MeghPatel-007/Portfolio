@@ -1,10 +1,10 @@
-import React from "react";
-import pdf from "/pdf/resume.pdf";
-import { motion } from "framer-motion";
-import Contact from "./contact.jsx";
+import React from 'react'
+import pdf from '/pdf/resume.pdf'
+import { motion } from 'framer-motion'
+import Contact from './contact.jsx'
 
 const img =
-  "https://res.cloudinary.com/dd4vpchfg/image/upload/v1777056330/resume_page-0001_n8316b.jpg";
+  'https://res.cloudinary.com/dd4vpchfg/image/upload/v1777078974/resume_page-0001_zk6gjp.jpg'
 
 function Resume() {
   return (
@@ -17,7 +17,7 @@ function Resume() {
           className="  bg-gray text-black font-iceberg px-6 md:px-10 lg:px-16 py-2.5 text-[12px] md:text-lg rounded-full shadow-md flex items-center justify-center transition duration-200 hover:brightness-105 active:scale-95 text-sm mx-5 mt-60 md:mt-100 md:mx-20 lg:mt-120 lg:mx-29 xl:mt-170 xl:mx-50"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
+          transition={{ duration: 0.8, ease: 'easeOut' }}
           viewport={{ once: true, amount: 0.3 }}
         >
           <a href={pdf} download="Megh_Patel_resume.pdf">
@@ -32,7 +32,7 @@ function Resume() {
             className="lg:w-full lg:h-full bg-orange rounded-lg flex items-center justify-center  "
             initial={{ rotate: 0 }}
             whileInView={{ rotate: 10 }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
+            transition={{ duration: 0.8, ease: 'easeOut' }}
             viewport={{ once: true }}
           >
             <motion.a
@@ -42,7 +42,7 @@ function Resume() {
               className="text-white text-xl font-iceberg bg-gray p-1 md:p-2 rounded-lg h-full  "
               initial={{ rotate: 0 }}
               whileInView={{ rotate: -10 }}
-              transition={{ duration: 0.8, ease: "easeOut" }}
+              transition={{ duration: 0.8, ease: 'easeOut' }}
               viewport={{ once: true }}
             >
               <img
@@ -57,7 +57,7 @@ function Resume() {
       </div>
       <Contact />
     </section>
-  );
+  )
 }
 
-export default Resume;
+export default Resume
